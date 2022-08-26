@@ -7,11 +7,23 @@
 # ---------------------------------------------------------------------------
 from classes.PessoaFisica import PessoaFisica
 from classes.Endereco import Endereco
+from classes.Produto import Produto
 
+p = Produto(88)
+print(p)
+
+p2 = Produto(87, 'Sabao')
+print(p2)
+
+#p.__id = 10
+p.set_id(10)
+print(p.to_dict())
+
+p.__nome = 'Fabio'
+print(p.to_dict())
 
 pessoa1 = PessoaFisica('Carlos', 'tiago@email.com', '524.222.452-6')
 print(pessoa1)
-
 
 end1 = Endereco('08320330', 430)
 print(end1)

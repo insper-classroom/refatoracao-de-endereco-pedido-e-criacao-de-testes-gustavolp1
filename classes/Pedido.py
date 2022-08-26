@@ -12,10 +12,14 @@ from classes.Carrinho import Carrinho
 import re
 
 
-
-
 class Pedido:
     EM_ABERTO = 1
     PAGO = 2
-    pass
     
+    def __init__(self, pessoa:PessoaFisica, endereco:Endereco, carrinho:Carrinho):
+        self.__pessoa = pessoa
+        self.__endereco = endereco
+        self.__carrinho = carrinho
+
+    def __str__(self):
+        return '{} - {} - {}'.format(self.__pessoa, self.__endereco, self.__carrinho)
