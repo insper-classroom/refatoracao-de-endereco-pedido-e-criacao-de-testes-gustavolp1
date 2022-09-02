@@ -29,6 +29,9 @@ class Endereco:
             self.complemento = complemento
             self.cep = str(cep)
 
+            while len(self.cep) < 8:
+                self.cep = '0' + self.cep
+
         else:
 
             self.rua = rua
@@ -45,6 +48,11 @@ class Endereco:
         como estado, cidade e rua
         '''
         # continuam existindo variaveis locais, nem tudo é propriedade de objeto
+
+        cep = str(cep)
+
+        while len(cep) < 8:
+            cep = '0' + cep
 
         # end point da API de consulta ao cep
         url_api = f'https://viacep.com.br/ws/{str(cep)}/json/'

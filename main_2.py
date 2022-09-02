@@ -21,8 +21,9 @@ pessoa1 = PessoaFisica('Carlos', 'tiago@email.com', '524.222.452-6')
 print(pessoa1)
 
 # Cria  um endereço
-end1 = Endereco('08320330', 430)
+end1 = Endereco('8320330', 430)
 print(end1)
+print(end1.cep)
 
 # Cria um outro endereço
 end2 = Endereco('04546042', 300)
