@@ -23,22 +23,22 @@ class PessoaFisica:
         self.nome = nome
         self.email = email
         self.cpf = cpf
-        self.__enderecos = {}
+        self.enderecos = {}
         PessoaFisica.lista_clientes.append(self)
 
     # escolher o estilo de retorno
 
     def adicionar_endereco(self, apelido_endereco, end:Endereco):
-        self.__enderecos[apelido_endereco] = end
+        self.enderecos[apelido_endereco] = end
         
     def remover_endereco(self, apelido_endereco):
-        del self.__enderecos[apelido_endereco]
+        del self.enderecos[apelido_endereco]
 
     def get_endereco(self, apelido_endereco):
-        return self.__enderecos[apelido_endereco]
+        return self.enderecos[apelido_endereco]
 
     def listar_enderecos(self):
-        return self.__enderecos
+        return self.enderecos
 
     def busca_nome(nome):
         for pessoa in PessoaFisica.lista_clientes:

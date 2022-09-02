@@ -17,9 +17,9 @@ class Pedido:
     PAGO = 2
     
     def __init__(self, pessoa:PessoaFisica, endereco:Endereco, carrinho:Carrinho):
-        self.__pessoa = pessoa
-        self.__endereco = endereco
-        self.__carrinho = carrinho
+        self.pessoa = pessoa
+        self.endereco = endereco
+        self.carrinho = carrinho
 
     def __str__(self):
-        return '{} - {} - {}'.format(self.__pessoa, self.__endereco, self.__carrinho)
+        return '{} - {} - {}'.format(self.pessoa, self.endereco, self.carrinho)

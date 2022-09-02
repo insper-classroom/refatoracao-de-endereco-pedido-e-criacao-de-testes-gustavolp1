@@ -13,27 +13,14 @@ class Produto:
     lista_clientes = []
 
     def __init__(self, id_produto, nome=''):
-        self.__id = id_produto
-        self.__nome = nome
+        self.id = id_produto
+        self.nome = nome
 
     def set_id(self, id_novo):
-        self.__id = id_novo
+        self.id = id_novo
 
     def get_id(self):
-        return self.__id
-
-    @property
-    def nome(self):
-        return self.__nome
-
-    @nome.setter
-    def nome(self, novo_nome):
-        if novo_nome[0] != 'T':
-            self.__nome = novo_nome
-
-    @nome.getter
-    def nome(self):
-        return self.__nome
+        return self.id
 
     def busca_nome(produto_id):
         for produto in Produto.lista_clientes:
